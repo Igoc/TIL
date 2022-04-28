@@ -248,3 +248,24 @@ $.ajax({
     }
 });
 ```
+
+#### 파일 송신
+
+``` javascript
+let file = $('#file')[0].files[0];
+
+let form_data = new FormData();
+form_data.append('file', file);
+
+$.ajax({
+    type: 'POST',
+    url: '<서버 URL>',
+    data: form_data,
+    cache: false,
+    contentType: false,
+    processData: false,
+    success: function (response) {
+        console.log(response);
+    }
+});
+```
