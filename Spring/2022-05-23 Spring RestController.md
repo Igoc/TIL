@@ -1,0 +1,43 @@
+## Spring RestController
+
+`@Controller` 어노테이션과 `@ResponseBody` 어노테이션이 결합된 것으로, 하위 메서드에 `@ResponseBody` 어노테이션을 붙이지 않아도 문자열이나 JSON 등의 형식으로 응답할 수 있다.
+
+``` java
+class User {
+
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+}
+
+@RestController
+class UserController {
+
+    // GET 방식의 users 라우터 정의
+    @GetMapping("/users")
+    public User getUsers() {
+        User user = new User();
+        user.setName("Alice");
+        user.setAge(20);
+
+        return user;
+    }
+
+}
+```
