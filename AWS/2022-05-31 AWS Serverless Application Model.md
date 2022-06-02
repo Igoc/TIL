@@ -29,6 +29,15 @@ sam deploy
 sam deploy --guided
 ```
 
+#### Docker를 이용하여 로컬 환경에서 실행
+
+Hot Reload 기능이 없기 때문에 수정했을 때마다 프로젝트 빌드를 먼저 수행해야 한다.
+
+``` bash
+# Docker를 이용하여 로컬 환경에서 실행
+sam local start-api
+```
+
 #### 로그 확인
 
 ``` bash
