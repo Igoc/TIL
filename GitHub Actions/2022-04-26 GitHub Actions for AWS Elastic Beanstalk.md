@@ -18,10 +18,10 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@master
 
-      - name: Set up Python 3.8
+      - name: Set up Python
         uses: actions/setup-python@v1
         with:
-          python-version: '3.8'
+          python-version: '<Python 버전>'
 
       - name: Generate deployment package
         run: zip -r deployment.zip . -x '*.git*'
@@ -47,6 +47,6 @@ jobs:
           application_name: ${{ secrets.APPLICATION_NAME }}
           environment_name: ${{ secrets.ENVIRONMENT_NAME }}
           version_label: 'python-${{ steps.format-time.outputs.replaced }}'
-          region: ap-northeast-2
+          region: <AWS 리전>
           deployment_package: deployment.zip
 ```
