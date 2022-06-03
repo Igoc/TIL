@@ -19,7 +19,7 @@ jobs:
 
       - uses: actions/setup-python@v3
         with:
-          python-version: "3.9"
+          python-version: '<Python 버전>'
 
       - uses: aws-actions/setup-sam@v2
 
@@ -27,7 +27,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-northeast-2
+          aws-region: <AWS 리전>
 
       - run: sam build --use-container
 
