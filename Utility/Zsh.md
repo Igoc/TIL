@@ -1,9 +1,0 @@
-## Zsh 히스토리 비활성화
-
-``` bash
-unset HISTFILE
-```
-
-## 참고 자료
-
-- [Temporarily disable history in zsh - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/692913/temporarily-disable-history-in-zsh)
