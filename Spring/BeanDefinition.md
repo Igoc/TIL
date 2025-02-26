@@ -2,6 +2,7 @@
 
 - 스프링 빈의 설정 메타 정보를 담고 있는 객체이다.
 - 스프링 컨테이너는 자바 코드나 XML 등으로부터 생성된 BeanDefinition을 기반으로 스프링 빈을 생성한다.
+- BeanDefinition을 생성하는 방법은 크게 GenericXmlApplicationContext처럼 직접 등록하는 방식과 AnnotationConfigApplicationContext처럼 팩토리 메서드를 통해 등록하는 방식으로 나뉜다.
 
 ## 참고 자료
 
